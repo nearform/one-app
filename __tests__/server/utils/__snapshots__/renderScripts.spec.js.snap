@@ -76,7 +76,7 @@ exports[`renderInitialStateScriptTag should render initial state inside a script
 	window.__webpack_public_path__ = \\"/\\";
 	window.__holocron_module_bundle_type__ = 'browser';
 	window.__CLIENT_HOLOCRON_MODULE_MAP__ = {\\"browser\\":{\\"key\\":\\"123\\",\\"modules\\":{\\"test-root\\":{\\"baseUrl\\":\\"https://example.com/cdn/test-root/2.2.2/\\",\\"browser\\":{\\"url\\":\\"https://example.com/cdn/test-root/2.2.2/test-root.browser.js\\",\\"integrity\\":\\"dhhfsdfwer\\"}},\\"a\\":{\\"baseUrl\\":\\"https://example.com/cdn/a/2.2.2/\\",\\"browser\\":{\\"url\\":\\"https://example.com/cdn/a/2.2.2/a.browser.js\\",\\"integrity\\":\\"fhgnt543\\"}},\\"c\\":{\\"baseUrl\\":\\"https://example.com/cdn/c/2.2.2/\\",\\"browser\\":{\\"url\\":\\"https://example.com/cdn/c/2.2.2/c.browser.js\\",\\"integrity\\":\\"323egdsbf\\"}},\\"b\\":{\\"baseUrl\\":\\"https://example.com/cdn/b/2.2.2/\\",\\"browser\\":{\\"url\\":\\"https://example.com/cdn/b/2.2.2/b.browser.js\\",\\"integrity\\":\\"yhrtrhw3\\"}}}},\\"legacyBrowser\\":{\\"key\\":\\"123\\",\\"modules\\":{\\"test-root\\":{\\"baseUrl\\":\\"https://example.com/cdn/test-root/2.2.2/\\",\\"legacyBrowser\\":{\\"url\\":\\"https://example.com/cdn/test-root/2.2.2/test-root.legacy.browser.js\\",\\"integrity\\":\\"567ty\\"}},\\"a\\":{\\"baseUrl\\":\\"https://example.com/cdn/a/2.2.2/\\",\\"legacyBrowser\\":{\\"url\\":\\"https://example.com/cdn/a/2.2.2/a.legacy.browser.js\\",\\"integrity\\":\\"7567ee\\"}},\\"c\\":{\\"baseUrl\\":\\"https://example.com/cdn/c/2.2.2/\\",\\"legacyBrowser\\":{\\"url\\":\\"https://example.com/cdn/c/2.2.2/c.legacy.browser.js\\",\\"integrity\\":\\"d8vdfdfv\\"}},\\"b\\":{\\"baseUrl\\":\\"https://example.com/cdn/b/2.2.2/\\",\\"legacyBrowser\\":{\\"url\\":\\"https://example.com/cdn/b/2.2.2/b.legacy.browser.js\\",\\"integrity\\":\\"7567ee\\"}}}}};
-	window.__INITIAL_STATE__ = {\\"intl\\":{\\"activeLocale\\":\\"en-US\\"},\\"config\\":{\\"rootModuleName\\":\\"test-root\\"},\\"holocron\\":{\\"loaded\\":[\\"test-root\\"]}};
+	window.__INITIAL_STATE__ = [\\"~#iM\\",[\\"intl\\",[\\"^0\\",[\\"activeLocale\\",\\"en-US\\"]],\\"config\\",[\\"^0\\",[\\"rootModuleName\\",\\"test-root\\"]],\\"holocron\\",[\\"^0\\",[\\"loaded\\",[\\"~#iS\\",[\\"test-root\\"]]]]]];
 </script>"
 `;
 
@@ -98,14 +98,14 @@ exports[`renderScripts should render all app scripts with bare state as default 
 	window.__webpack_public_path__ = \\"/_/static/\\";
 	window.__holocron_module_bundle_type__ = 'browser';
 	window.__CLIENT_HOLOCRON_MODULE_MAP__ = {\\"key\\":\\"123\\",\\"modules\\":{\\"test-root\\":{\\"baseUrl\\":\\"https://example.com/cdn/test-root/2.2.2/\\",\\"browser\\":{\\"url\\":\\"https://example.com/cdn/test-root/2.2.2/test-root.browser.js\\",\\"integrity\\":\\"dhhfsdfwer\\"}},\\"a\\":{\\"baseUrl\\":\\"https://example.com/cdn/a/2.2.2/\\",\\"browser\\":{\\"url\\":\\"https://example.com/cdn/a/2.2.2/a.browser.js\\",\\"integrity\\":\\"fhgnt543\\"}},\\"c\\":{\\"baseUrl\\":\\"https://example.com/cdn/c/2.2.2/\\",\\"browser\\":{\\"url\\":\\"https://example.com/cdn/c/2.2.2/c.browser.js\\",\\"integrity\\":\\"323egdsbf\\"}},\\"b\\":{\\"baseUrl\\":\\"https://example.com/cdn/b/2.2.2/\\",\\"browser\\":{\\"url\\":\\"https://example.com/cdn/b/2.2.2/b.browser.js\\",\\"integrity\\":\\"yhrtrhw3\\"}}}};
-	window.__INITIAL_STATE__ = \\"{\\\\\\"intl\\\\\\":{\\\\\\"activeLocale\\\\\\":\\\\\\"en-US\\\\\\"},\\\\\\"config\\\\\\":{\\\\\\"rootModuleName\\\\\\":\\\\\\"test-root\\\\\\"},\\\\\\"holocron\\\\\\":{\\\\\\"loaded\\\\\\":[\\\\\\"test-root\\\\\\"]}}\\";
+	window.__INITIAL_STATE__ = \\"[\\\\\\"~#iM\\\\\\",[\\\\\\"intl\\\\\\",[\\\\\\"^0\\\\\\",[\\\\\\"activeLocale\\\\\\",\\\\\\"en-US\\\\\\"]],\\\\\\"config\\\\\\",[\\\\\\"^0\\\\\\",[\\\\\\"rootModuleName\\\\\\",\\\\\\"test-root\\\\\\"]],\\\\\\"holocron\\\\\\",[\\\\\\"^0\\\\\\",[\\\\\\"loaded\\\\\\",[\\\\\\"~#iS\\\\\\",[\\\\\\"test-root\\\\\\"]]]]]]\\";
 </script>
 <script src=\\"/_/static/app~vendors.js\\" integrity=\\"sha256-hQX6eBOiXd4Y1P6lypbnxiSVn5hlngqaQMk4EJpAn44= sha384-dQaNuKynPD1onwRNRxJobv25+Zf3bDF0dgdO9Yl3/a43L548hFiJbOX+BY3xRL0i\\" crossorigin=\\"anonymous\\"></script>
 <script src=\\"/_/static/runtime.js\\" integrity=\\"sha256-BS+z4Q61be6nCzJ4wwo7SuTFIMIIGOdCepjFH8MjbSo= sha384-ptJKDvCGQNbG6YFcIGGrTNCGz+/Whizhe0apjJOq3WIsF993jRX5c864OTSaXfEE\\" crossorigin=\\"anonymous\\"></script>
 <script src=\\"/_/static/vendors.js\\" integrity=\\"sha256-VaK5IR+K3vP1HaYNTOiTS+6dFA+4cyXrllRsCC8VO+w= sha384-NMQgmNz2kyu39sfgXy88kxQ9/tT6MUNkQNMUYztNScoWLNeTsVrl4Czhw3OyygNc\\" crossorigin=\\"anonymous\\"></script>
 <script src=\\"/_/static/i18n/en-US.js\\" crossorigin=\\"anonymous\\"></script>
 <script src=\\"https://example.com/cdn/test-root/2.2.2/test-root.browser.js?key=123\\" crossorigin=\\"anonymous\\" integrity=\\"dhhfsdfwer\\"></script>
-<script src=\\"/_/static/app.js\\" integrity=\\"sha256-2QXp81GxT/SYSwtjdl48T2cl2fCF6e1n2xoNnhDwpW4= sha384-ZxiHrSuvGSAExxL77bA0MH0Zjx15JUKzaxZqY+04qt1vxGaMamvfn8oXfXshISQk\\" crossorigin=\\"anonymous\\"></script>"
+<script src=\\"/_/static/app.js\\" integrity=\\"sha256-y4OihuIe71sxF9EACVHBQ4OcrX3bL4ot1oX5PPsfYEA= sha384-gqIbnyJlqxNwUkQHH7+0ZqLRpAIGsN/diFzbHamIsVszpdqVnm0M4fggGWkvznaW\\" crossorigin=\\"anonymous\\"></script>"
 `;
 
 exports[`renderScripts should render scripts without defaults 1`] = `
@@ -114,10 +114,6 @@ exports[`renderScripts should render scripts without defaults 1`] = `
 	window.__webpack_public_path__ = ;
 	window.__holocron_module_bundle_type__ = 'browser';
 	window.__CLIENT_HOLOCRON_MODULE_MAP__ = {};
-	window.__INITIAL_STATE__ = \\"{\\\\\\"intl\\\\\\":{\\\\\\"activeLocale\\\\\\":\\\\\\"en-US\\\\\\"},\\\\\\"config\\\\\\":{\\\\\\"rootModuleName\\\\\\":\\\\\\"test-root\\\\\\"},\\\\\\"holocron\\\\\\":{\\\\\\"loaded\\\\\\":[]}}\\";
+	window.__INITIAL_STATE__ = \\"[\\\\\\"~#iM\\\\\\",[\\\\\\"intl\\\\\\",[\\\\\\"^0\\\\\\",[\\\\\\"activeLocale\\\\\\",\\\\\\"en-US\\\\\\"]],\\\\\\"config\\\\\\",[\\\\\\"^0\\\\\\",[\\\\\\"rootModuleName\\\\\\",\\\\\\"test-root\\\\\\"]],\\\\\\"holocron\\\\\\",[\\\\\\"^0\\\\\\",[\\\\\\"loaded\\\\\\",[\\\\\\"~#iS\\\\\\",[]]]]]]\\";
 </script>"
 `;
-
-exports[`serializeClientInitialState should fail to serialize state and fallback to defaults 1`] = `"{\\"config\\":{\\"rootModuleName\\":\\"test-root\\"},\\"holocron\\":{\\"loaded\\":[]}}"`;
-
-exports[`serializeClientInitialState should serialize state 1`] = `"{\\"holocron\\":{\\"loaded\\":[]}}"`;
