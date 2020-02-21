@@ -13,7 +13,7 @@
  * or implied. See the License for the specific language governing
  * permissions and limitations under the License.
  */
-
+import CircuitBreaker from 'opossum';
 import React from 'react';
 import { Provider } from 'react-redux';
 import url, { Url } from 'url';
@@ -22,6 +22,27 @@ import { composeModules } from 'holocron';
 import match from '../../universal/utils/matchPromisified';
 
 import { renderForString, renderForStaticMarkup } from '../utils/reactRendering';
+const wait = require('util').promisify(setTimeout)
+const immediate = require('util').promisify(setImmediate)
+
+const f = async ({ dispatch, modules }) => {
+  const a = process.hrtime()
+  const res = await dispatch(composeModules(modules))
+  await immediate()
+  // console.log(process.hrtime(a))
+  return true
+}
+
+const options = {
+  timeout: 100, // If our function takes longer than 3 seconds, trigger a failure
+  errorThresholdPercentage: 10, // When 1% of requests fail, trip the circuit
+  resetTimeout: 60000 // After 10 seconds, try again.
+};
+const breaker = new CircuitBreaker(f, options);
+breaker.fallback(() => false)
+// breaker.on('timeout', () => {
+//  console.log('timeout')
+// })
 
 export default function createRequestHtmlFragment({ createRoutes }) {
   return async (req, res, next) => {
@@ -69,7 +90,15 @@ export default function createRequestHtmlFragment({ createRoutes }) {
           },
         }));
 
-      await dispatch(composeModules(routeModules));
+      const fallback = await breaker.fire({ dispatch, modules: routeModules });
+      
+      if (!fallback) {
+        // console.error('circuit open')
+        res.send('fallback!')
+        return
+      }
+
+      // await dispatch(composeModules(routeModules))
 
       const state = store.getState();
       const disableScripts = state.getIn(['rendering', 'disableScripts']);
@@ -92,4 +121,10 @@ export default function createRequestHtmlFragment({ createRoutes }) {
 
     return next();
   };
+}
+
+function doSSR() {
+
+
+
 }
